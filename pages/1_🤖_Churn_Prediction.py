@@ -110,7 +110,7 @@ if predict:
     with col1:
 
         st.markdown('### User Data')        
-        st.dataframe({k: v[0] for k, v in user_input.items()}, use_container_width=True)
+        st.dataframe(pd.DataFrame(user_input).T, use_container_width=True)
 
     with col2:
 
